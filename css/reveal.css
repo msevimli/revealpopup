@@ -1,0 +1,599 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+
+.big-link {
+   visibility: hidden;
+    display: none;
+}
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0px;
+		left: 0; 
+         z-index: 9998;
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: -100px; 
+	/*	left: 50%;
+		margin-left: -300px;
+        */
+		width: 100%;
+		background: #eee url(modal-gloss.png) no-repeat -200px -80px;
+		position: absolute;
+		z-index: 101;
+		padding: 30px 40px 34px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+         z-index: 9999;
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+
+
+    .mycontainer {
+  
+        position: relative;
+        width: 800px;
+        margin: auto;
+        margin-left: 15px;
+    }
+    .div-header {
+        position: relative;
+        bottom: 0px;
+        margin: auto;
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        background-color: #17ba6f;
+        border-radius: 5px;
+        color: white;
+        height: auto;
+        padding: 25px;
+        min-height: 50px;
+        background-image: url(background.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom;
+    }
+
+    .myrow {
+
+        float: left; 
+        height: 475px; /*455*/
+        width: auto;
+        position: relative;
+        margin: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: dimgray;
+        padding: 10px;
+        display: table;
+        border-radius: 15px;
+        background-image: url(bg.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom;
+        background-origin: 25px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        
+    }
+
+    .myBasket {
+
+        float: left; 
+        height: 475px; /*455*/
+        width: auto;
+        position: relative;
+        margin: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: dimgray;
+        padding: 10px;
+        display: table;
+        border-radius: 15px;
+        background-image: url(bg.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom;
+        background-origin: 25px;
+        overflow: hidden
+        width: 190px;
+        visibility: hidden;
+    
+    }
+      .myImgBasket {
+        position: relative;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        overflow: hidden;
+          
+    }
+     .separete-line-basket {
+        background-color: white;
+        position:absolute;
+        width: 90%;
+        height: 2px;
+        border-radius: 85px;
+        top: 80px;
+    }
+    .cartList {
+        top:30px;
+        position: relative;
+        height: 250px;
+        overflow-y: scroll;
+        width: 185px;
+          word-wrap: break-word;
+        vertical-align: middle;
+    
+    }
+    .cartListCon {
+        position: relative;
+        height: 50px;
+        width: auto;
+        margin-top: 10px;
+        padding: 15px;
+        top:0px;
+      
+    }
+    .coverQntPrc {
+        position: relative;
+        width: 100%;
+        margin-top:10px;
+        top:5px;
+    }
+    .summa {
+        position: relative;
+        top:40px;
+        color: white;
+        text-align: center;
+    }
+    .qnt {
+        position: absolute;
+        color: white;
+        font-size: 12px;
+            
+    }
+    .cartListPrice {
+        position: absolute;
+        color: #17ba6f;
+        font-size: 12px;
+        top:0px;
+        right: 10%;
+    
+    }
+    .cartLine {
+        position: relative;
+        height: 1px;
+        width: 100%;
+        background-color:gray;
+        top:-15px;
+        
+    }
+    .kurvButtonCover {
+        position: relative;
+        width: 100%;
+        top:90px;
+    }
+    .kurvButton {
+        
+        position: absolute;
+        background-color: #17ba6f;
+        color: white;
+       right: 0px;
+        
+    }
+
+    .continueButton {
+        position: absolute;
+        background-color: #17ba6f;
+        color: white;
+         left: 0px;
+    }
+     .titleTextCart {
+        
+        color:white;
+        position: relative;
+        text-align: center;  
+        font-size: 14px;
+        cursor: pointer;
+        padding: 10px;
+        width: 15px;
+        top: 18px;
+        margin-top:10px;
+           word-wrap: break-word;
+
+    }
+
+    .myimg {
+        position: relative;
+        margin: auto;
+        width: 185px;
+        height: 185px;
+        cursor: pointer;
+        overflow: hidden;
+   
+    }
+
+    .titleText {
+        
+        color:white;
+        position: relative;
+        text-align: center;  
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px;
+        width: 15px;
+        top: 8px;
+
+    }
+    
+    .separete-line {
+        background-color: white;
+        position:absolute;
+        width: 90%;
+        height: 2px;
+        border-radius: 85px;
+        top: 245px;
+    }
+
+    .separete-line-2 {
+        background-color: white;
+        position:absolute;
+        width: 90%;
+        height: 2px;
+        border-radius: 85px;
+        top: 325px;
+    }
+
+    .price-tag {
+        color: white;
+        position: relative;
+        top:15px; 
+        left: 10px;
+        
+    }
+    .price-num {
+        color: #17ba6f;
+       /* color: #dd1f26; */
+       position: absolute;
+        top:15px;
+        right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    
+    }
+     .price-num-sale {
+        color: #17ba6f;
+       /* color: #dd1f26; */
+       position: absolute;
+        top:15px;
+        right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+         /*text-decoration:line-through;*/
+          text-decoration:line-through;
+
+    }
+
+    .processPrice {
+     visibility:hidden;
+    }
+    .sale-price-tag {
+        color: white;
+        position:absolute;
+        top:45px;
+        left:10px;  
+        
+    }
+
+    .sale-price-num {
+        color: #FFA07A;
+       /* color: #dd1f26; */
+       position: absolute;
+        top:45px;
+        right: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    
+    }
+    .button-class {
+        background-color:#17ba6f;
+        width: 100%;
+        position: absolute;
+        top:100px;
+        color: white;
+    }
+    .buttonCover {
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        float: left;
+        left: 0px;
+    }
+    .jaButton {
+        background-color: #228B22;
+        position: relative;
+        bottom: 0px;
+        color:white;
+        width: 100px;
+        right: 5px;
+        border-style: none;
+    }   
+    .nejButton {
+        background-color:firebrick;
+        position: relative;
+        bottom: 0px;
+        color:white;
+        width: 100px;
+        left: 5px;
+        border-style: none;
+    }   
+
+    .option-select-fix, .option-select-fug {
+        position: absolute;
+        width: 60px;
+        top:10px;
+        background-color:#17ba6f;
+        color: white;
+    }
+    
+    .fugColor {
+        position: absolute;
+        width: 60px;
+        top:10px;
+        background-color:#17ba6f;
+        color: white;
+        right: 28%;
+    }
+    .quantity-box-fix, .quantity-box-fug {
+        position: absolute;
+        width: 40px;
+        top:10px;
+        right: 0px;
+        height: 25px;
+        background-color:cadetblue;
+        color: white;
+        text-align: center;
+        border-style: none;
+    
+    }
+
+    .size-width, .size-height, .tick {
+        color:white;
+        position: absolute;
+        visibility: hidden; 
+        
+    }
+
+        /* Shine */
+    figure {        
+	   overflow: hidden;  
+    }
+    
+    .hover02 figure {
+	   position: relative;
+}
+    .hover02 figure::before {
+	   position: absolute;
+	   top: 0;
+	   left: -75%;
+	   z-index: 2;
+	   display: block;
+	   content: '';
+	   width: 50%;
+	   height: 100%;
+	   background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	   background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	   -webkit-transform: skewX(-25deg);
+	   transform: skewX(-25deg);
+    
+}
+    .hover02 figure:hover::before {
+	   -webkit-animation: shine .75s;
+	   animation: shine .75s;
+}
+    @-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+    @keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+      .centerBlock {       
+        display: table;
+        
+        width: 185px;
+        word-wrap: break-word;
+        text-align: center;
+        line-height: 20px; 
+        
+    
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 300px) {
+    /* For tablets: */
+    .col-m-1 {
+        width: 8.33%;
+        
+    }
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 
+    {
+        width: 53.33%;
+    }
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    .colx-1 {width: 8.33%;}
+    .colx-2 {width: 16.66%;}
+    /*.col-3 {width: 25%;} */
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {
+        width: 100%;
+        left: -10px;
+    }
+    .col-1x {
+        width: 12%;
+        margin-left: 650px;
+        left: 50%;		
+    }
+    .col-12x {
+        width: 70%;
+        margin-left: -440px;
+        left: 50%;
+		
+    }
+}
+
+.cartList::-webkit-scrollbar{
+width:6px;
+background-color:#cccccc;
+    border-style: solid;
+    border-radius: 15px;
+    border-color:seagreen;
+     opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    
+    
+} 
+
+.cartList::-webkit-scrollbar-thumb{
+width:6px;
+background-color:grey;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    
+} 
+
+.calcCont {
+    position: relative;
+    margin-top: 15px;
+    width:100%;
+    /*
+    border-style: solid;
+    border-width: 1px;
+     background-image: url(calc.jpg); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom;
+    */
+    background-color: coral;
+    font-size: 16px;
+   
+}
+.calcText {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  
+}
+.textCont {
+    position: relative;
+    text-align: right;
+    width: 170px;
+/*    text-decoration: underline;*/
+	 color:black;
+	font-weight: bold;
+	font-size: 16px;
+ float: left;
+    margin-right:50px;
+    margin-left: 30px;
+    
+}
+
+
+.myField {
+    width: 50px;
+      height: 23px;
+}
+.myField-select {
+    width: 70px;
+      height: 23px;
+    margin-right: -10px;
+}
+.inputCont {
+    position: absolute;
+    top: 0px;
+ 	right: -70px;
+  
+}
+.getCalctype {
+    display: none;    
+}
+.descripton-cart {
+
+        width: 100%;
+        position: absolute;
+        top:45px;
+        color: white;
+    font-size: 13px;
+}
+
+.calcInfo {
+    position: relative;
+    
+    font-size: 16px;
+    width: 500px;
+    left: -120px;
+    text-align: center;
+}
